@@ -1,6 +1,20 @@
 import {describe,it} from "./folio/testrunner.spec"
+import {LoginPage} from "./pages/login"
+const baseData = require('./data/base.json')
+const accountData = require('./data/base.json')
+const paymentData = require('./data/base.json')
+const productData = require('./data/base.json')
 
-it("login",async({page})=>{
-  await page.goto("http://awswrkshpalb-1570520390.us-west-2.elb.amazonaws.com:3000/");
- // await page.screenshot({ path: 'page.png', fullPage: true });
+describe('Create User Functionality works', async()=>{
+  it("Invalid Login",async({page})=>{
+    const loginPage = new LoginPage(page)
+
+    await loginPage.navigate(baseData.url)
+    await loginPage.login(accountData.negativeLogin.username,accountData.negativeLogin.password)
+    await loginPage.loginUnsuccessful()
+    
+  })
+  it.skip("login",async({page})=>{
+    
+  })
 })
