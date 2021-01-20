@@ -1,0 +1,17 @@
+{
+  "name": "playwright-folio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ashish Ghosh",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^8.2.1",
+    "playwright": "^1.7.1",
+    "@playwright/test": "0.171.0"
+  }
+}
