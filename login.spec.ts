@@ -10,7 +10,7 @@ describe('Create User Functionality works', async()=>{
     const loginPage = new LoginPage(page)
 
     await loginPage.navigate(baseData.url)
-    await loginPage.login(accountData.negativeLogin.username,accountData.negativeLogin.password)
+    await loginPage.login(accountData.email,accountData.password)
     await loginPage.loginUnsuccessful()
     
   })
