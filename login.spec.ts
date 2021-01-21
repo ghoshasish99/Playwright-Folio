@@ -18,6 +18,5 @@ describe('Create User Functionality works', async()=>{
     accountData.create.email
     await loginPage.createUser(accountData.create.firstname,accountData.create.lastname,email,accountData.create.password)
     await loginPage.createUserSuccessful()
-    await page.screenshot({ path: 'report/page.png', fullPage: true });
   })
 })

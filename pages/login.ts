@@ -1,5 +1,4 @@
 import {Page} from 'playwright'
-import {expect} from '@playwright/test'
  
 class LoginPage{
 
@@ -38,6 +37,11 @@ class LoginPage{
 
     public async createUserSuccessful(){
         await this.Page.waitForSelector('input[aria-label="Product search"]')
+  }
+
+  public async alreadyLoggedIn(fname,lname,email,password){
+      this.createUser(fname,lname,email,password);
+      this.createUserSuccessful()
   }
 
 }
