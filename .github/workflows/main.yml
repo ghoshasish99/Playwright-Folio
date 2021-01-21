@@ -22,3 +22,8 @@ jobs:
         node-version: 10.x
     - run: npm install 
     - run: npx folio --param browserName=chromium
+    - uses: actions/upload-artifact@v2
+      if: ${{ always() }}
+      with:
+        name: test-artifacts
+        path: report
