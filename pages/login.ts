@@ -33,8 +33,7 @@ class LoginPage{
    }
 
     public async loginUnsuccessful(){
-        var errorMessage = await this.Page.$('[class="MuiTypography-root MuiTypography-caption MuiTypography-colorSecondary MuiTypography-alignCenter"]')
-        expect(errorMessage.innerText()).toContain('Customer not found')
+        await this.Page.waitForSelector('[class="MuiTypography-root MuiTypography-caption MuiTypography-colorSecondary MuiTypography-alignCenter"]')
   }
 
     public async createUserSuccessful(){
