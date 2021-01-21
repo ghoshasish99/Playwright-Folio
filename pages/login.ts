@@ -16,7 +16,7 @@ class LoginPage{
     public async login(username,password){
          await this.Page.fill('#email',username);
          await this.Page.fill('#password',password);
-         await this.Page.click('text="LOG IN"')
+         await this.Page.click('text="Log In"')
     }
 
     public async createUser(fname,lname,email,password){
@@ -34,7 +34,7 @@ class LoginPage{
 
     public async loginUnsuccessful(){
         var errorMessage = await this.Page.$('[class="MuiTypography-root MuiTypography-caption MuiTypography-colorSecondary MuiTypography-alignCenter"]')
-        expect(errorMessage.innerText).toContain('Customer not found')
+        expect(errorMessage.innerText()).toContain('Customer not found')
   }
 
     public async createUserSuccessful(){
