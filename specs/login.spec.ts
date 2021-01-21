@@ -1,7 +1,7 @@
-import {describe,it} from "./folio/testrunner.spec"
-import {LoginPage} from "./pages/login"
-const baseData = require('./data/base.json')
-const accountData = require('./data/account.json')
+import {describe,it} from "../folio/testrunner.spec"
+import {LoginPage} from "../pages/login"
+const baseData = require('../data/base.json')
+const accountData = require('../data/account.json')
 
 describe('Create User Functionality works', async()=>{
   it("Should validate Invalid Login",async({page})=>{

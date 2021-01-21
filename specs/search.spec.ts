@@ -1,9 +1,9 @@
-import {describe,it} from "./folio/testrunner.spec"
-import {LoginPage} from "./pages/login"
-import {SearchPage} from "./pages/search"
-const baseData = require('./data/base.json')
-const accountData = require('./data/account.json')
-const searchItem = require('./data/product.json')
+import {describe,it} from "../folio/testrunner.spec"
+import {LoginPage} from "../pages/login"
+import {SearchPage} from "../pages/search"
+const baseData = require('../data/base.json')
+const accountData = require('../data/account.json')
+const searchItem = require('../data/product.json')
 
 describe('Search and Add Functionality works', async()=>{
   it("Should be able to search and add a product",async({page})=>{

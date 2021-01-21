@@ -1,12 +1,12 @@
-import {describe,it} from "./folio/testrunner.spec"
-import {LoginPage} from "./pages/login"
-import {SearchPage} from "./pages/search"
-import {PaymentPage} from "./pages/payment"
-const baseData = require('./data/base.json')
-const accountData = require('./data/account.json')
-const searchItem = require('./data/product.json')
-const address = require('./data/address.json')
-const payment = require('./data/payment.json')
+import {describe,it} from "../folio/testrunner.spec"
+import {LoginPage} from "../pages/login"
+import {SearchPage} from "../pages/search"
+import {PaymentPage} from "../pages/payment"
+const baseData = require('../data/base.json')
+const accountData = require('../data/account.json')
+const searchItem = require('../data/product.json')
+const address = require('../data/address.json')
+const payment = require('../data/payment.json')
 
 describe('Functionality Functionality works', async()=>{
   it("Should be able to purchase a product",async({page})=>{
